@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Robot Directory 00000001</title>
+    <link rel="stylesheet" href="/public/styles.css">
+  </head>
+  <body>
+    <h1>Robot Directory</h1>
+    <div class="nav">
+      <a href="../directory">All Robots</a>
+      <a href="../directory/employed">Employed Robots</a>
+      <a href="../directory/unemployed">Ready to Hire Robots</a>
+    </div>
+    <div class="all-users">
+      {{#users}}
+        <a href="./{{username}}"><div class="robot {{id}}">
+          <img src="{{avatar}}">
+          <h4>{{username}}</h4>
+          {{#job}}
+            <p>{{job}}: {{company}}</p>
+          {{/job}}
+          {{^job}}
+            <p class="red">Available for hire</p>
+          {{/job}}
+        </div>
+      {{/users}}
+    </div></a>
+  </body>
+</html>
